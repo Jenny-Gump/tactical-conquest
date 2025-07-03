@@ -2,33 +2,65 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Разрешения -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.vending.BILLING" />
     
+    <!-- Характеристики устройства -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TacticalConquest"
         android:hardwareAccelerated="true"
         android:largeHeap="true"
         tools:targetApi="34">
         
+        <!-- Главная активность -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="sensorLandscape">
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
-        <activity android:name=".GameActivity" android:screenOrientation="sensorLandscape" />
-        <activity android:name=".ShopActivity" android:screenOrientation="sensorLandscape" />
-        <activity android:name=".LevelSelectActivity" android:screenOrientation="sensorLandscape" />
-        <activity android:name=".SettingsActivity" android:screenOrientation="sensorLandscape" />
+        <!-- Игровая активность -->
+        <activity
+            android:name=".GameActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        <!-- Активность магазина -->
+        <activity
+            android:name=".ShopActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        <!-- Активность выбора уровня -->
+        <activity
+            android:name=".LevelSelectActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        <!-- Активность настроек -->
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
             
+        <!-- Google Play Billing Service -->
+        <service android:name="com.android.vending.billing.InAppBillingService" />
+        
     </application>
+
 </manifest>

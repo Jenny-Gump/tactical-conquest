@@ -1,29 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="48dp" />
+    <!-- Декоративный фон -->
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_pattern"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnPlay"
-        style="@style/GameButton"
-        android:text="@string/play" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TODO: Copy full layouts from Claude artifacts"
+    <!-- Логотип игры -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:textColor="@color/text_secondary" />
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/game_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <!-- Название игры -->
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/GameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <!-- Контейнер для очков славы -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvGloryPoints"
+        style="@style/GameCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/secondary_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_glory_points"
+                app:tint="@color/primary_dark" />
+
+            <TextView
+                android:id="@+id/tvGloryPoints"
+                style="@style/GameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/glory_points"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Контейнер для кнопок -->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tvVersion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvGloryPoints">
+
+        <!-- Кнопка Играть -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlay"
+            style="@style/GameButton.Primary"
+            android:layout_marginBottom="12dp"
+            android:text="@string/play"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="textStart" />
+
+        <!-- Кнопка Магазин -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShop"
+            style="@style/GameButton"
+            android:layout_marginBottom="12dp"
+            android:text="@string/shop"
+            app:icon="@drawable/ic_shop"
+            app:iconGravity="textStart" />
+
+        <!-- Кнопка Настройки -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            style="@style/GameButton"
+            android:layout_marginBottom="12dp"
+            android:text="@string/settings"
+            app:icon="@drawable/ic_settings"
+            app:iconGravity="textStart" />
+
+        <!-- Кнопка Достижения -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAchievements"
+            style="@style/GameButton"
+            android:layout_marginBottom="12dp"
+            android:text="@string/achievements"
+            app:icon="@drawable/ic_trophy"
+            app:iconGravity="textStart" />
+
+        <!-- Кнопка Выход -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExit"
+            style="@style/GameButton.Small"
+            android:text="@string/exit"
+            app:icon="@drawable/ic_exit"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+
+    <!-- Версия приложения -->
+    <TextView
+        android:id="@+id/tvVersion"
+        style="@style/GameText.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.7"
+        tools:text="v1.0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

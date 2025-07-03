@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/GameCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@color/surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Иконка товара -->
+        <TextView
+            android:id="@+id/tvItemIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shop_item_icon_background"
+            android:gravity="center"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="👑" />
+
+        <!-- Название товара -->
+        <TextView
+            android:id="@+id/tvItemName"
+            style="@style/GameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/llButtons"
+            app:layout_constraintStart_toEndOf="@+id/tvItemIcon"
+            app:layout_constraintTop_toTopOf="@+id/tvItemIcon"
+            tools:text="Премиум пакет" />
+
+        <!-- Описание товара -->
+        <TextView
+            android:id="@+id/tvItemDescription"
+            style="@style/GameText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/llButtons"
+            app:layout_constraintStart_toEndOf="@+id/tvItemIcon"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+            tools:text="Удвоенные очки славы + эксклюзивные скины!" />
+
+        <!-- Кнопки покупки -->
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Кнопка покупки за деньги -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuy"
+                style="@style/GameButton.Small"
+                android:layout_width="100dp"
+                android:minHeight="36dp"
+                android:textSize="14sp"
+                tools:text="$2.99" />
+
+            <!-- Кнопка покупки за очки славы -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuyWithGlory"
+                style="@style/GameButton.Small"
+                android:layout_width="100dp"
+                android:layout_marginTop="4dp"
+                android:minHeight="36dp"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:backgroundTint="@color/secondary_dark"
+                tools:text="500 ⚔"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

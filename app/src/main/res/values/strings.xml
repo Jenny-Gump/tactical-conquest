@@ -1,14 +1,105 @@
 <resources>
+    <!-- Основное -->
     <string name="app_name">Tactical Conquest</string>
+    
+    <!-- Главное меню -->
     <string name="play">Играть</string>
     <string name="shop">Магазин</string>
     <string name="settings">Настройки</string>
     <string name="achievements">Достижения</string>
     <string name="exit">Выход</string>
+    
+    <!-- Игровой процесс -->
     <string name="glory_points">Очки Славы: %d</string>
-    <string name="ok">OK</string>
-    <string name="yes">Да</string>
-    <string name="no">Нет</string>
+    <string name="population">Население: %d</string>
+    <string name="turn">Ход: %d</string>
+    <string name="end_turn">Завершить ход</string>
+    <string name="pause">Пауза</string>
+    <string name="resume">Продолжить</string>
+    <string name="restart">Начать заново</string>
+    <string name="back_to_menu">В главное меню</string>
+    
+    <!-- Юниты -->
+    <string name="infantry">Пехота</string>
+    <string name="archers">Лучники</string>
+    <string name="cavalry">Кавалерия</string>
+    <string name="unit_cost">Стоимость: %d</string>
+    <string name="unit_health">Здоровье: %d/%d</string>
+    <string name="unit_attack">Атака: %d</string>
+    <string name="unit_defense">Защита: %d</string>
+    <string name="unit_movement">Движение: %d</string>
+    
+    <!-- Местность -->
+    <string name="terrain_plains">Равнины</string>
+    <string name="terrain_hills">Холмы</string>
+    <string name="terrain_forest">Лес</string>
+    <string name="terrain_river">Река</string>
+    <string name="terrain_city">Город</string>
+    
+    <!-- Результаты -->
     <string name="victory">Победа!</string>
     <string name="defeat">Поражение</string>
+    <string name="level_complete">Уровень пройден</string>
+    <string name="stars_earned">Звезд получено: %d</string>
+    <string name="glory_earned">Очков Славы: +%d</string>
+    <string name="next_level">Следующий уровень</string>
+    <string name="retry">Повторить</string>
+    
+    <!-- Уровни -->
+    <string name="level_select">Выбор уровня</string>
+    <string name="level_locked">Заблокирован</string>
+    <string name="level_name">Уровень %d</string>
+    <string name="level_1_name">Первая битва</string>
+    <string name="level_2_name">Оборона рубежей</string>
+    <string name="level_3_name">Переправа через реку</string>
+    <string name="level_4_name">Осада крепости</string>
+    <string name="level_5_name">Битва в лесу</string>
+    <string name="level_6_name">Горный перевал</string>
+    <string name="level_7_name">Великая равнина</string>
+    <string name="level_8_name">Последний рубеж</string>
+    <string name="level_9_name">Решающее сражение</string>
+    <string name="level_10_name">Финальная битва</string>
+    
+    <!-- Магазин -->
+    <string name="shop_title">Магазин</string>
+    <string name="premium_pack">Премиум пакет</string>
+    <string name="premium_desc">Удвоенные очки славы + эксклюзивные скины</string>
+    <string name="skin_roman">Римские легионеры</string>
+    <string name="skin_greek">Греческие гоплиты</string>
+    <string name="skin_barbarian">Варвары</string>
+    <string name="skin_egyptian">Египтяне</string>
+    <string name="skin_persian">Персы</string>
+    <string name="buy">Купить</string>
+    <string name="bought">Куплено</string>
+    <string name="price">Цена: %s</string>
+    
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="sound">Звук</string>
+    <string name="music">Музыка</string>
+    <string name="vibration">Вибрация</string>
+    <string name="graphics_quality">Качество графики</string>
+    <string name="low">Низкое</string>
+    <string name="medium">Среднее</string>
+    <string name="high">Высокое</string>
+    <string name="reset_progress">Сбросить прогресс</string>
+    <string name="reset_confirm">Вы уверены? Весь прогресс будет потерян!</string>
+    
+    <!-- Достижения -->
+    <string name="achievement_first_win">Первая победа</string>
+    <string name="achievement_flawless">Безупречная победа</string>
+    <string name="achievement_speed_run">Молниеносная война</string>
+    <string name="achievement_collector">Коллекционер</string>
+    <string name="achievement_veteran">Ветеран</string>
+    
+    <!-- Диалоги -->
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+    <string name="loading">Загрузка…</string>
+    <string name="error">Ошибка</string>
+    <string name="connection_error">Ошибка соединения</string>
+    <string name="purchase_success">Покупка успешна!</string>
+    <string name="purchase_failed">Ошибка покупки</string>
 </resources>

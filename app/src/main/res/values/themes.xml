@@ -1,20 +1,53 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
     <style name="Theme.TacticalConquest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_dark</item>
+        <item name="colorOnSecondary">@color/text_on_secondary</item>
+        <!-- Status bar color -->
         <item name="android:statusBarColor">@color/primary_dark</item>
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <!-- Font -->
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <!-- Fullscreen mode -->
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
     
+    <!-- Splash screen theme -->
+    <style name="Theme.TacticalConquest.Splash" parent="Theme.TacticalConquest">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+    
+    <!-- Button styles -->
     <style name="GameButton" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">60dp</item>
         <item name="android:minWidth">200dp</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/button_default</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@animator/button_state_animator</item>
     </style>
     
     <style name="GameButton.Primary">
         <item name="backgroundTint">@color/secondary</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     
     <style name="GameButton.Small">
@@ -23,10 +56,24 @@
         <item name="android:textSize">14sp</item>
     </style>
     
+    <!-- Text styles -->
     <style name="GameTitle">
         <item name="android:textSize">32sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/shadow</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+    
+    <style name="GameSubtitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:gravity">center</item>
     </style>
     
     <style name="GameText">
@@ -39,18 +86,27 @@
         <item name="android:textColor">@color/text_secondary</item>
     </style>
     
+    <!-- Card styles -->
     <style name="GameCard">
         <item name="cardBackgroundColor">@color/surface</item>
         <item name="cardCornerRadius">12dp</item>
         <item name="cardElevation">4dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="android:layout_margin">8dp</item>
     </style>
     
+    <!-- Dialog styles -->
     <style name="GameDialog" parent="Theme.MaterialComponents.Dialog">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/secondary</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
     </style>
     
+    <!-- Progress bar style -->
     <style name="GameProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
         <item name="android:minHeight">12dp</item>
         <item name="android:maxHeight">12dp</item>
     </style>

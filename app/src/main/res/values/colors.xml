@@ -1,17 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#8B4513</color>
+    <!-- Основные цвета темы -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Цвета игры - античная тематика -->
+    <color name="primary">#8B4513</color> <!-- Коричневый -->
     <color name="primary_dark">#654321</color>
     <color name="primary_light">#A0522D</color>
-    <color name="secondary">#DAA520</color>
+    <color name="secondary">#DAA520</color> <!-- Золотой -->
     <color name="secondary_dark">#B8860B</color>
     <color name="secondary_light">#FFD700</color>
-    <color name="background">#F5DEB3</color>
+    
+    <!-- Фоновые цвета -->
+    <color name="background">#F5DEB3</color> <!-- Пшеничный -->
     <color name="background_dark">#DEB887</color>
     <color name="surface">#FAEBD7</color>
     <color name="surface_dark">#D2B48C</color>
-    <color name="text_primary">#2F4F4F</color>
+    
+    <!-- Цвета текста -->
+    <color name="text_primary">#2F4F4F</color> <!-- Темно-серый -->
     <color name="text_secondary">#696969</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_secondary">#000000</color>
+    
+    <!-- Цвета игроков -->
+    <color name="player_color">#4169E1</color> <!-- Синий -->
+    <color name="player_color_dark">#1E3A8A</color>
+    <color name="enemy_color">#DC143C</color> <!-- Красный -->
+    <color name="enemy_color_dark">#8B0000</color>
+    <color name="neutral_color">#808080</color> <!-- Серый -->
+    <color name="neutral_color_dark">#606060</color>
+    
+    <!-- Цвета местности -->
+    <color name="terrain_plains">#90EE90</color> <!-- Светло-зеленый -->
+    <color name="terrain_hills">#8B7355</color> <!-- Коричневый -->
+    <color name="terrain_forest">#228B22</color> <!-- Темно-зеленый -->
+    <color name="terrain_river">#4682B4</color> <!-- Синий -->
+    <color name="terrain_city">#FFE4B5</color> <!-- Бежевый -->
+    
+    <!-- Цвета юнитов -->
+    <color name="unit_infantry">#4682B4</color>
+    <color name="unit_archers">#32CD32</color>
+    <color name="unit_cavalry">#FF8C00</color>
+    
+    <!-- UI элементы -->
+    <color name="button_default">#DAA520</color>
+    <color name="button_pressed">#B8860B</color>
+    <color name="button_disabled">#C0C0C0</color>
+    <color name="hex_border">#404040</color>
+    <color name="hex_selected">#FFFF00</color>
+    <color name="hex_highlight">#FFD700</color>
+    <color name="hex_movement">#00FF00</color>
+    <color name="hex_attack">#FF0000</color>
+    
+    <!-- Прозрачности -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#80000000</color>
+    <color name="overlay_dark">#CC000000</color>
+    <color name="overlay_light">#33000000</color>
+    
+    <!-- Эффекты -->
+    <color name="shadow">#40000000</color>
+    <color name="glow">#80FFD700</color>
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FF9800</color>
 </resources>

@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="120dp"
+    android:viewportWidth="300"
+    android:viewportHeight="120">
+    
+    <!-- Shield background -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M150,10 L100,30 L100,70 Q100,100 150,110 Q200,100 200,70 L200,30 Z"/>
+    
+    <!-- Shield border -->
+    <path
+        android:strokeColor="@color/secondary"
+        android:strokeWidth="4"
+        android:fillColor="#00000000"
+        android:pathData="M150,10 L100,30 L100,70 Q100,100 150,110 Q200,100 200,70 L200,30 Z"/>
+    
+    <!-- Crossed swords -->
+    <path
+        android:fillColor="@color/secondary"
+        android:pathData="M130,40 L170,80 M170,40 L130,80"
+        android:strokeWidth="6"
+        android:strokeColor="@color/secondary"/>
+    
+    <!-- Star at top -->
+    <path
+        android:fillColor="@color/secondary_light"
+        android:pathData="M150,25 L155,35 L165,35 L157.5,42 L162,52 L150,45 L138,52 L142.5,42 L135,35 L145,35 Z"/>
+    
+</vector>

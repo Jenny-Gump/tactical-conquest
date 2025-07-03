@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".GameActivity">
+
+    <!-- Игровое поле -->
+    <com.tacticalconquest.game.ui.GameView
+        android:id="@+id/gameView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/llBottomPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTopPanel" />
+
+    <!-- Верхняя панель -->
+    <LinearLayout
+        android:id="@+id/llTopPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_dark"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Кнопка паузы -->
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/pause"
+            android:src="@drawable/ic_pause"
+            app:tint="@color/text_primary" />
+
+        <!-- Название уровня -->
+        <TextView
+            android:id="@+id/tvLevelName"
+            style="@style/GameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            tools:text="Уровень 1: Первая битва" />
+
+        <!-- Информация о ходе -->
+        <TextView
+            android:id="@+id/tvTurnInfo"
+            style="@style/GameText.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            tools:text="Ход: 1" />
+
+        <!-- Население -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/resource_background"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_population"
+                app:tint="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvPopulation"
+                style="@style/GameText.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                tools:text="5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Нижняя панель -->
+    <LinearLayout
+        android:id="@+id/llBottomPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_dark"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Панель юнитов -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <!-- Кнопка пехоты -->
+                <LinearLayout
+                    android:id="@+id/btnInfantry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/unit_button_background"
+                        android:gravity="center"
+                        android:text="⚔"
+                        android:textColor="@color/white"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        style="@style/GameText.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/infantry" />
+
+                    <TextView
+                        android:id="@+id/tvInfantryCost"
+                        style="@style/GameText.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary"
+                        tools:text="1" />
+                </LinearLayout>
+
+                <!-- Кнопка лучников -->
+                <LinearLayout
+                    android:id="@+id/btnArchers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/unit_button_background"
+                        android:gravity="center"
+                        android:text="🏹"
+                        android:textColor="@color/white"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        style="@style/GameText.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/archers" />
+
+                    <TextView
+                        android:id="@+id/tvArchersCost"
+                        style="@style/GameText.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary"
+                        tools:text="2" />
+                </LinearLayout>
+
+                <!-- Кнопка кавалерии -->
+                <LinearLayout
+                    android:id="@+id/btnCavalry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/unit_button_background"
+                        android:gravity="center"
+                        android:text="🐴"
+                        android:textColor="@color/white"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        style="@style/GameText.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/cavalry" />
+
+                    <TextView
+                        android:id="@+id/tvCavalryCost"
+                        style="@style/GameText.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary"
+                        tools:text="3" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Кнопка завершения хода -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEndTurn"
+            style="@style/GameButton.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/end_turn" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

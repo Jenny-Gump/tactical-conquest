@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardLevel"
+    style="@style/GameCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Номер уровня -->
+        <TextView
+            android:id="@+id/tvLevelNumber"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/level_number_background"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <!-- Иконка замка для заблокированных уровней -->
+        <ImageView
+            android:id="@+id/ivLock"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_lock"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLevelNumber"
+            app:layout_constraintEnd_toEndOf="@+id/tvLevelNumber"
+            app:layout_constraintStart_toStartOf="@+id/tvLevelNumber"
+            app:layout_constraintTop_toTopOf="@+id/tvLevelNumber"
+            app:tint="@color/white"
+            tools:visibility="visible" />
+
+        <!-- Название уровня -->
+        <TextView
+            android:id="@+id/tvLevelName"
+            style="@style/GameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvLevelNumber"
+            app:layout_constraintTop_toTopOf="@+id/tvLevelNumber"
+            tools:text="Первая битва" />
+
+        <!-- Звезды -->
+        <LinearLayout
+            android:id="@+id/llStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvLevelNumber"
+            app:layout_constraintTop_toBottomOf="@+id/tvLevelName"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivStar1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_star_filled"
+                app:tint="@color/secondary" />
+
+            <ImageView
+                android:id="@+id/ivStar2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_star_filled"
+                app:tint="@color/secondary" />
+
+            <ImageView
+                android:id="@+id/ivStar3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_star_empty"
+                app:tint="@color/secondary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
