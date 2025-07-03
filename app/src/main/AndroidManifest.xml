@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TacticalConquest"
         android:hardwareAccelerated="true"
+        android:largeHeap="true"
         tools:targetApi="34">
         
         <activity
@@ -24,22 +25,10 @@
             </intent-filter>
         </activity>
         
-        <activity
-            android:name=".GameActivity"
-            android:screenOrientation="sensorLandscape" />
-        
-        <activity
-            android:name=".ShopActivity"
-            android:screenOrientation="sensorLandscape" />
-        
-        <activity
-            android:name=".LevelSelectActivity"
-            android:screenOrientation="sensorLandscape" />
-        
-        <activity
-            android:name=".SettingsActivity"
-            android:screenOrientation="sensorLandscape" />
+        <activity android:name=".GameActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:name=".ShopActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:name=".LevelSelectActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:name=".SettingsActivity" android:screenOrientation="sensorLandscape" />
             
     </application>
-
 </manifest>

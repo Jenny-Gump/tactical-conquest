@@ -1,3 +1,10 @@
-package com.tacticalconquest.game
+package com.tacticalconquest.game.engine
 
-// TODO: Copy content from Claude artifacts for HexMap.kt
+import com.tacticalconquest.game.models.TerrainType
+
+class HexMap(val width: Int, val height: Int) {
+    // TODO: Copy full implementation from Claude artifacts
+    
+    fun getTerrain(hex: HexCoordinate): TerrainType? = null
+    fun getHexOwner(hex: HexCoordinate): GameEngine.Player? = null
+}

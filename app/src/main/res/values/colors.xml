@@ -8,4 +8,10 @@
     <color name="secondary_light">#FFD700</color>
     <color name="background">#F5DEB3</color>
     <color name="background_dark">#DEB887</color>
+    <color name="surface">#FAEBD7</color>
+    <color name="surface_dark">#D2B48C</color>
+    <color name="text_primary">#2F4F4F</color>
+    <color name="text_secondary">#696969</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
